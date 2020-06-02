@@ -31,8 +31,6 @@ brew "zsh-syntax-highlighting"
 
 cask "docker"
 cask "docker-toolbox"
-cask "java8"
-cask "java11"
 cask "iterm2"
 cask "textmate"
 cask "jetbrains-toolbox"

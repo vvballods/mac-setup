@@ -1,13 +1,13 @@
 #!/bin/sh
 
-# ___  ___             _____ _____   _____      _               
-# |  \/  |            |  _  /  ___| /  ___|    | |              
-# | .  . | __ _  ___  | | | \ `--.  \ `--.  ___| |_ _   _ _ __  
-# | |\/| |/ _` |/ __| | | | |`--. \  `--. \/ _ \ __| | | | '_ \ 
+# ___  ___             _____ _____   _____      _
+# |  \/  |            |  _  /  ___| /  ___|    | |
+# | .  . | __ _  ___  | | | \ `--.  \ `--.  ___| |_ _   _ _ __
+# | |\/| |/ _` |/ __| | | | |`--. \  `--. \/ _ \ __| | | | '_ \
 # | |  | | (_| | (__  \ \_/ /\__/ / /\__/ /  __/ |_| |_| | |_) |
-# \_|  |_/\__,_|\___|  \___/\____/  \____/ \___|\__|\__,_| .__/ 
-#                                                        | |    
-#                                                        |_|    
+# \_|  |_/\__,_|\___|  \___/\____/  \____/ \___|\__|\__,_| .__/
+#                                                        | |
+#                                                        |_|
 
 echo "Mac OS Setup by Valters Ballods"
 
@@ -53,6 +53,10 @@ echo "Configuring Mac..."
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
+# Menu bar: show remaining battery time (on pre-10.8); hide percentage
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+#defaults write com.apple.menuextra.battery ShowTime -string "YES"
+
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
 
@@ -67,6 +71,12 @@ defaults write com.apple.dock autohide -bool true
 
 # Only Show Open Applications In The Dock
 defaults write com.apple.dock static-only -bool true
+
+# Finder: show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Finder: show path bar
+defaults write com.apple.finder ShowPathbar -bool true
 
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
