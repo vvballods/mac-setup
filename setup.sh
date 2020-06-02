@@ -67,6 +67,9 @@ sudo scutil --set LocalHostName "mac.valters.local"
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
+# Show Date
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm"
+
 # Use function keys as standard function keys.
 defaults write com.apple.keyboard.fnState -int 1
 
