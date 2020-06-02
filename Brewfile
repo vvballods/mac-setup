@@ -18,7 +18,7 @@ brew "yq"
 brew "aria2"
 brew "httpie"
 
-brew "nvm"n
+brew "nvm"
 brew "git"
 brew "wget"
 brew "jenv"
