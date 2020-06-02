@@ -70,6 +70,9 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 # Show Date
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm"
 
+# Show all files
+defaults write com.apple.Finder AppleShowAllFiles true
+
 # Use function keys as standard function keys.
 defaults write com.apple.keyboard.fnState -int 1
 
