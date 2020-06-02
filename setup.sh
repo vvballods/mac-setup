@@ -69,6 +69,11 @@ sudo scutil --set LocalHostName "mac.valters.local"
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
+# This makes your Mac run quicker:
+# Hide All Desktop Icons from http://osxdaily.com/2009/09/23/hide-all-desktop-icons-in-mac-os-x/
+# The files are still in Desktop directory, but they are now not shown.
+defaults write com.apple.finder CreateDesktop -bool false;killall Finder
+
 # Show Date
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm"
 
