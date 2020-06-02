@@ -75,6 +75,9 @@ defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm"
 # Show all files
 defaults write com.apple.Finder AppleShowAllFiles true
 
+# Always use list view
+defaults write com.apple.finder FXPreferredViewStyle Nlsv
+
 # Use function keys as standard function keys.
 defaults write com.apple.keyboard.fnState -int 1
 
