@@ -1,7 +1,5 @@
-tap "caskroom/cask"
-tap "caskroom/fonts"
 tap "burntsushi/ripgrep", "https://github.com/BurntSushi/ripgrep.git"
-tap "sambadevi/powerlevel9k"
+tap "romkatv/powerlevel10k"
 
 brew "burntsushi/ripgrep/ripgrep-bin"
 brew "tldr"
@@ -27,7 +25,7 @@ brew "yarn"
 brew "go"
 brew "docker-compose"
 
-brew "powerlevel9k"
+brew "powerlevel10k"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 

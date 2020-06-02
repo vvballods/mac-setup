@@ -10,8 +10,6 @@ export ZSH="/Users/vvballods/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-POWERLEVEL9K_MODE=awesome-patched
-# ZSH_THEME="powerlevel9k/powerlevel9k"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -95,7 +93,7 @@ plugins=(git
 )
 
 source $ZSH/oh-my-zsh.sh
-source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
