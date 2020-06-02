@@ -47,6 +47,8 @@ brew upgrade
 brew update
 brew bundle
 
+git config --global alias.lg "log --graph --pretty='format:%C(yellow)%h %C(green)[%C(bold blue)%G? - %aN%C(reset)%C(green)]%C(reset)%C(auto)%d%C(reset) %s %C(green)<%cr>%C(reset)' --abbrev-commit --decorate --all"
+
 echo "Configuring Jenv..."
 
 jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/
