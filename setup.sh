@@ -9,9 +9,7 @@
 #                                                        | |    
 #                                                        |_|    
 
-echo "Mac OS Setup by Eduards Sizovs"
-echo "Follow me on Twitter! https://twitter.com/eduardsi"
-
+echo "Mac OS Setup by Valters Ballods"
 
 
 ##############################
@@ -25,7 +23,7 @@ cp ./dotfiles/.zshrc ~/
 #            Configs         #
 ##############################
 
-sudo cp configs/*.plist /Library/Preferences/ 
+sudo cp configs/*.plist /Library/Preferences/
 
 ##############################
 #            Fonts           #
@@ -49,36 +47,7 @@ brew upgrade
 brew update
 brew bundle
 
-#############################################
-### Generate ssh keys & add to ssh-agent
-### See: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
-#############################################
-
-echo "Generating ssh keys, adding to ssh-agent..."
-read -p 'Input email for ssh key: ' useremail
-
-echo "Use default ssh file location, enter a passphrase: "
-ssh-keygen -t rsa -b 4096 -C "$useremail"  # will prompt for password
-eval "$(ssh-agent -s)"
-
-# Now that sshconfig is synced add key to ssh-agent and
-# store passphrase in keychain
-ssh-add -K ~/.ssh/id_rsa
-
-# If you're using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.
-
-if [ -e ~/.ssh/config ]
-then
-    echo "ssh config already exists. Skipping adding osx specific settings... "
-else
-	echo "Writing osx specific settings to ssh config... "
-   cat <<EOT >> ~/.ssh/config
-	Host *
-		AddKeysToAgent yes
-		UseKeychain yes
-		IdentityFile ~/.ssh/id_rsa
-EOT
-fi
+echo "Configuring Mac..."
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -96,7 +65,7 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-# Only Show Open Applications In The Dock  
+# Only Show Open Applications In The Dock
 defaults write com.apple.dock static-only -bool true
 
 # Display full POSIX path as Finder window title
@@ -131,7 +100,6 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
 
-
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
@@ -151,13 +119,6 @@ defaults write com.apple.systemuiserver menuExtras -array \
 # Disable smart quotes and smart dashes
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
-
-# Disable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Use function F1, F, etc keys as standard function keys
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
@@ -190,6 +151,8 @@ defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+echo "Mac has been configured."
 
 echo ""
 echo "Done!"
