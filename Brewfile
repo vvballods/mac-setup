@@ -25,6 +25,7 @@ brew "jenv"
 brew "yarn"
 brew "go"
 brew "docker-compose"
+brew "kubectx"
 
 brew "powerlevel10k"
 brew "zsh-autosuggestions"
