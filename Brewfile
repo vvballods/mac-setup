@@ -1,5 +1,6 @@
 tap "burntsushi/ripgrep", "https://github.com/BurntSushi/ripgrep.git"
 tap "romkatv/powerlevel10k"
+tap "AdoptOpenJDK/openjdk"
 
 brew "burntsushi/ripgrep/ripgrep-bin"
 brew "tldr"
@@ -17,7 +18,7 @@ brew "yq"
 brew "aria2"
 brew "httpie"
 
-brew "nvm"
+brew "nvm"n
 brew "git"
 brew "wget"
 brew "jenv"
@@ -29,6 +30,8 @@ brew "powerlevel10k"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
+cask "adoptopenjdk8"
+cask "adoptopenjdk11"
 cask "docker"
 cask "docker-toolbox"
 cask "iterm2"

@@ -47,11 +47,34 @@ brew upgrade
 brew update
 brew bundle
 
+echo "Configuring Jenv..."
+
+jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/
+jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/
+
 echo "Configuring Mac..."
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
+
+# Set computer name (as done via System Preferences → Sharing)
+sudo scutil --set ComputerName "MacValters"
+sudo scutil --set HostName "mac.valters"
+sudo scutil --set LocalHostName "mac.valters.local"
+
+# Reveal IP address, hostname, OS version, etc. when clicking the clock
+# in the login window
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# Use function keys as standard function keys.
+defaults write com.apple.keyboard.fnState -int 1
+
+# Change minimize/maximize window effect
+defaults write com.apple.dock mineffect -string "scale"
+
+# Disable the sudden motion sensor as it’s not useful for SSDs
+sudo pmset -a sms 0
 
 # Menu bar: show remaining battery time (on pre-10.8); hide percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
