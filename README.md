@@ -7,7 +7,7 @@ cd mac-setup && sh ./setup.sh
 ## Install from Apple Store
 - [HyperDock](https://apps.apple.com/us/app/hyperdock/id449830122?mt=12) - Window Management/Window Previews
 
-## Installed manually
+## Install manually
 - [Turbo Boost Switcher](http://tbswitcher.rugarciap.com/) - Enable / Disable Turbo Boost feature on demand.
                                                       Monitors both CPU Load, Temperature, Fans and Battery.
 - [TG Pro](https://www.tunabellysoftware.com/tgpro) - Temperature monitoring, fan control & diagnostics for all Macs
