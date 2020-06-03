@@ -66,8 +66,11 @@ sudo scutil --set HostName "mac.valters"
 sudo scutil --set LocalHostName "mac.valters.local"
 
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
-# in the login window
+# in the login window (need to logout and click on the clock)
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# Remove Siri
+defaults write ~/Library/Preferences/com.apple.systemuiserver.plist "NSStatusItem Visible Siri" -bool FALSE
 
 # This makes your Mac run quicker:
 # Hide All Desktop Icons from http://osxdaily.com/2009/09/23/hide-all-desktop-icons-in-mac-os-x/
