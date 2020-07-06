@@ -111,6 +111,18 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
+# Hide animations
+defaults write com.apple.dock launchanim -bool false
+
+# Scale effect when minimizing apps
+defaults write com.apple.dock mineffect -string scale
+
+# Set dock tile size
+defaults write com.apple.dock tilesize -int 35
+
+# Don't show recent apps
+defaults write com.apple.dock "show-recents" -bool false
+
 # Only Show Open Applications In The Dock
 defaults write com.apple.dock static-only -bool true
 
