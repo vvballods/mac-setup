@@ -124,7 +124,7 @@ defaults write com.apple.dock tilesize -int 35
 defaults write com.apple.dock "show-recents" -bool false
 
 # Only Show Open Applications In The Dock
-defaults write com.apple.dock static-only -bool true
+defaults write com.apple.dock static-only -bool false
 
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
