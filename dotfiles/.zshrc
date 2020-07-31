@@ -87,6 +87,7 @@ plugins=(git
   sudo
   thor
   docker
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
