@@ -48,6 +48,7 @@ cask "firefox"
 cask "keepassx"
 cask "ledger-live"
 
+cask "notion"
 cask "vlc"
 cask "zoomus"
 cask "spotify"

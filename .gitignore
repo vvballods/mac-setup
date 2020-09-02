@@ -1,0 +1,4 @@
+Brewfile.lock.json
+.idea
+*.iml
+.DS_store
