@@ -50,15 +50,15 @@ cask "ledger-live"
 
 cask "notion"
 cask "vlc"
-cask "zoomus"
+cask "zoom"
 cask "spotify"
 cask "slack"
 cask "skype"
 cask "whatsapp"
 cask "telegram"
 
+cask "tresorit"
 cask "google-backup-and-sync"
 cask "android-file-transfer"
 
-cask "anaconda"
 cask "wireshark"
