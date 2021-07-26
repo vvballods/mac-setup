@@ -20,7 +20,6 @@ brew "powerlevel10k"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
-cask "adoptopenjdk8"
 cask "adoptopenjdk11"
 cask "docker"
 cask "docker-toolbox"
