@@ -51,7 +51,6 @@ git config --global alias.lg "log --graph --pretty='format:%C(yellow)%h %C(green
 
 echo "Configuring Jenv..."
 
-jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/
 jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/
 
 echo "Configuring Mac..."
@@ -61,9 +60,9 @@ echo "Configuring Mac..."
 osascript -e 'tell application "System Preferences" to quit'
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "MacValters"
-sudo scutil --set HostName "mac.valters"
-sudo scutil --set LocalHostName "mac.valters.local"
+sudo scutil --set ComputerName "McValters"
+sudo scutil --set HostName "mc.valters"
+sudo scutil --set LocalHostName "mc.valters.local"
 
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window (need to logout and click on the clock)

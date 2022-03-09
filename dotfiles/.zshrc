@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PATH=/usr/local/anaconda3/bin:$PATH
+export PATH="/opt/homebrew/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/vvballods/.oh-my-zsh"
@@ -16,7 +16,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 ############ POWERLEVEL THEME SETTINGS ##############
 POWERLEVEL9K_MODE='awesome-patched'
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir anaconda vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 
 
@@ -91,7 +91,7 @@ plugins=(git
 )
 
 source $ZSH/oh-my-zsh.sh
-source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
