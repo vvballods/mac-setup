@@ -51,7 +51,7 @@ git config --global alias.lg "log --graph --pretty='format:%C(yellow)%h %C(green
 
 echo "Configuring Jenv..."
 
-jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/
+#jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/
 
 echo "Configuring Mac..."
 
