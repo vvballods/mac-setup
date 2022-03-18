@@ -37,7 +37,6 @@ cask "vlc"
 cask "zoom"
 cask "spotify"
 cask "slack"
-cask "skype"
 cask "whatsapp"
 cask "telegram"
 
