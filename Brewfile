@@ -1,4 +1,5 @@
 tap "romkatv/powerlevel10k"
+tap "microsoft/git"
 
 brew "tldr"
 brew "fd"
@@ -26,6 +27,7 @@ cask "textmate"
 cask "jetbrains-toolbox"
 cask "postman"
 cask "google-cloud-sdk"
+cask "git-credential-manager-core"
 
 cask "google-chrome"
 cask "firefox"
