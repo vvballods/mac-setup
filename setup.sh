@@ -48,6 +48,7 @@ brew update
 brew bundle
 
 git config --global alias.lg "log --graph --pretty='format:%C(yellow)%h %C(green)[%C(bold blue)%G? - %aN%C(reset)%C(green)]%C(reset)%C(auto)%d%C(reset) %s %C(green)<%cr>%C(reset)' --abbrev-commit --decorate --all"
+git config --global alias.amend "commit --amend --no-edit --date=now"
 
 echo "Configuring Jenv..."
 
@@ -90,6 +91,9 @@ defaults write com.apple.keyboard.fnState -int 1
 
 # Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"
+
+# Tiled windows should not have margins
+defaults write com.apple.WindowManager EnableTiledWindowMargins -bool false
 
 # Disable the sudden motion sensor as it’s not useful for SSDs
 sudo pmset -a sms 0
