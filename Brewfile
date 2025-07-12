@@ -43,4 +43,4 @@ cask "whatsapp"
 cask "telegram"
 
 cask "google-drive"
-cask "android-file-transfer"
+cask "macdroid"
